@@ -54,12 +54,11 @@ const buildPlayers = (players, type) => {
     else
         i = 1
     for (; i < players.length; i++) {
-        var temp = getRandomStrength();
         fragment += `
         <div class="player">
             <img src="${players[i].image}" alt="">
             <div class="name">${players[i].name}</div>
-            <div class="strength">${temp}</div>
+            <div class="strength">${players[i].strength}</div>
         </div>`;
     }
     // Loop through players and accumulate HTML template
