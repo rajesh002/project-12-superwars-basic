@@ -48,8 +48,12 @@ const getRandomStrength = () => {
 
 const buildPlayers = (players, type) => {
     let fragment = "";
-
-    for (var i = 0; i < players.length; i++) {
+    var i;
+    if (type == "hero")
+        i = 0
+    else
+        i = 1
+    for (; i < players.length; i++) {
         var temp = getRandomStrength();
         fragment += `
         <div class="player">
